@@ -4,7 +4,8 @@ import jakarta.persistence.*
 @Entity
 @Table(name = "content")
 class Content(
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id: Long? = null,
 
     @Column(nullable = false)
@@ -20,5 +21,5 @@ class Content(
     var starRating: Float,
 
     @Column(nullable = true)
-    var director: String? = null,
+    var director: String? = null
 )
